@@ -1,0 +1,437 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+/* Navigation Section */
+nav {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdcc04;
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+nav a {
+  text-decoration: none; /* Remove the underline for all anchor elements */
+}
+
+/* Logo Style */
+nav .logo {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 2rem;
+  text-decoration: none; 
+  cursor: pointer; /* Add a cursor pointer to indicate it's clickable for the logo */
+}
+
+nav .nav-items {
+  flex: 1; /* nav items nearer to logo*/
+}
+
+nav .nav-items ul {
+  display: flex;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+nav .nav-items li {
+  margin-right: 20px; 
+}
+
+nav .nav-items ul li {
+  display: inline-block;
+  padding: 16px;
+  position: relative;
+}
+
+nav .nav-items ul li a {
+  color: black;
+  text-decoration: none; /* Remove black underline */
+  font-size: 20px;
+}
+
+nav .nav-items ul li::after {
+  content: '';
+  width: 0%;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  display: block;
+}
+
+nav .nav-items ul li:hover::after {
+  width: 100%; /* White underline when hover cover fully */
+}
+
+/* Highlight active page in navigation. For e.g, when the user
+is at "About Us" Page, the "About Us" in the navigation section will be highlighted white.*/
+nav .nav-items ul li:nth-child(2) a {
+  color: white; 
+  text-decoration: none; /* Remove the underline */
+}
+
+/* Get Started Button Styles */
+#but a.button-link {
+  background-color: #fff;
+  color: black;
+  font-size: 21px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  text-decoration: none; /* Remove default link underline */
+  display: inline-block; /* Ensure button takes the size of its content */
+}
+
+#but a.button-link:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
+/* Plans and Price Section */
+.intro{
+  margin-bottom: 100px;
+}
+
+/* Heading Styles */
+.heading {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.heading h1 {
+  font-size: 50px;
+  position: relative;
+  color: black;
+  margin-bottom: 52px;
+}
+
+.heading h1::after { /*This is to add in the yellow underline under the title "Our Plans" */
+  content: "";
+  position: absolute;
+  background-color: #fdcc04;
+  width: 100%;
+  height: 3px;
+  display: block;
+}
+
+/* Containers  */
+.container {
+width: 100%;
+background: white;
+}
+
+.container h2 {
+color: black;
+font-size: 32px;
+padding: 50px;
+text-align: center;
+}
+
+.heading p{
+font-size: 22px;
+text-align: center;
+margin-bottom: 30px;
+}
+
+/* Price Row Styles */
+.price-row {
+width: 90%;
+max-width: 1000px;
+display: grid;
+margin: auto;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+grid-gap: 50px;
+}
+
+/* Price Column Styles */
+.price-col {
+background: white;
+padding: 10% 15%;
+text-align: center;
+border-radius: 15px;
+color: black;
+border: 1.7px solid #007bff;
+transition: 0.3s;
+}
+
+.price-col:hover {
+transform: scale(1.05); /* Scale the box when the mouse hover */
+}
+
+.price-col p {
+font-size: 23px; 
+line-height: 1.6; 
+font-weight: bold;
+}
+
+.price-col h3 {
+font-size: 40px; 
+margin: 25px; 
+font-weight: 520;
+}
+
+/* This part is to make the price bigger, then the word at the back smaller */
+.price-col h3 span {
+font-size: 20px;
+}
+
+.price-col ul {
+text-align: left;
+margin: 20px 0;
+color: #3a3a3a; 
+list-style: none; /* Remove the Bullet Points as to replace it with checkbox icon */
+}
+
+.price-col ul li {
+margin: 10px 0; 
+font-size: 16px; 
+}
+
+/* Select Plan Button in each of the container */
+.price-col button {
+width: 100%;
+padding: 13px;
+background: transparent;
+color: black;
+font-size: 15px;
+margin-top: 20px; 
+border: 1px solid black;
+border-radius: 8px;
+cursor: pointer;
+}
+
+/* Pop Out effect when the mouse hover to each container */
+.price-col button:hover {
+background: #ffefae;
+transition: 0.5s;
+}
+
+/* Why Choose Us? Section */
+#features {
+background-color: #f5e9ff;
+text-align: center;
+width: 100%;
+padding: 45px;
+margin-bottom: 70px;
+}
+
+#features h1 {
+font-size: 42px;
+}
+
+.features-info .feature {
+font-size: 25px;
+padding-top: 35px;
+}
+
+.features-info {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+}
+
+.feature {
+flex: 1;
+max-width: 300px;
+margin: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+align-content: space-between;
+}
+
+.feature img {
+width: 100px;
+height: 100px;
+margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+background-color: rgb(140, 82, 140);
+color: #fff;
+padding: 40px;
+text-align: center;
+}
+
+.foot-cont {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.foot-cont h1{
+margin-bottom: 5px;
+}
+
+.social-media-icons {
+margin-bottom: 2px;
+}
+
+.social-media-icons i {
+font-size: 40px; 
+margin: 10px;
+padding: 40px;
+}
+
+.nav-foot {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+
+.nav-foot ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+}
+
+.nav-foot li {
+margin-right: 20px;
+}
+
+.nav-foot a {
+text-decoration: none;
+color: #fff;
+font-weight: bold;
+font-size: 20px;
+transition: 0.5s;
+padding: 7px;
+}
+
+.nav-foot a:hover {
+color: #fdcc04; /* Change color of nav items on hover */
+}
+
+.Copyright p {
+margin-top: 100px; 
+}
+
+/* Button for the user to scroll back to the top */
+#back-to-top-btn {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 40px;
+height: 40px;
+font-size: 18px;
+background-color: #fff;
+color: #007bff;
+border: 2px solid #007bff;
+border-radius: 50%;
+padding: 8px;
+cursor: pointer;
+outline: none;
+transition: 0.3s;
+}
+
+#back-to-top-btn:hover {
+background-color: #007bff;
+color: #fff;
+}
+
+/* Mobile View (max-width: 768px) */
+
+/* Navigation section */
+@media screen and (max-width:768px){
+  .heading p{
+    font-size: 18px;
+  }
+    
+  nav .logo {
+    font-size: 1.5rem;
+  }
+  nav .nav-items ul li {
+    padding: 0.5rem;
+    
+  }
+  nav .nav-items ul li a{
+    font-size: 1.1rem;
+  }
+  #but a.button-link {
+    font-size: 14px; /* Adjust the font size for the button in mobile view */
+    margin-right:20px;
+  }
+}
+
+/* Plans and Price Section */
+@media screen and (max-width: 768px) {
+  .price-row {
+    grid-template-columns: repeat(3, 1fr); /* Display three boxes in a row for mobile */
+    grid-gap: 20px; /* Adjusted grid gap for better spacing on mobile */
+  }
+  
+  .price-col {
+    padding: 10% 5%; /* Adjusted padding for smaller boxes */
+    margin: 2%;
+  }
+
+  .price-col p {
+    font-size: 19px;
+  }
+  
+  .price-col h3 {
+    font-size: 30px; 
+    margin: 15px 0 25px; 
+  }
+  
+  .price-col ul li {
+    margin: 8px 0; 
+    font-size: 14px; 
+  }
+  
+  .price-col button {
+    margin-top: 15px; 
+  }
+}
+
+/* Why Choose Us? Section */
+@media (max-width: 768px) {
+  #features h1 {
+    font-size: 32px;
+  }
+
+  .features-info .feature {
+    font-size: 18px;
+    padding-top: 40px;
+  }
+
+  .feature{
+    margin: 20px;
+  }
+}
+
+.scrolling-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.scrolling-animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+  
+  
