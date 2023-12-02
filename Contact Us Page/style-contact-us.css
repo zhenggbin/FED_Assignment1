@@ -1,0 +1,366 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Navigation Section */
+nav {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdcc04;
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+nav a {
+  text-decoration: none; /* Remove the underline for all anchor elements */
+}
+
+/* Logo Style */
+nav .logo {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 2rem;
+  text-decoration: none; 
+  cursor: pointer; /* Add a cursor pointer to indicate it's clickable for the logo */
+}
+
+nav .nav-items {
+  flex: 1; /* nav items nearer to logo*/
+}
+
+nav .nav-items ul {
+  display: flex;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+nav .nav-items li {
+  margin-right: 20px; 
+}
+
+nav .nav-items ul li {
+  display: inline-block;
+  padding: 16px;
+  position: relative;
+}
+
+nav .nav-items ul li a {
+  color: black;
+  text-decoration: none; /* Remove black underline */
+  font-size: 20px;
+}
+
+nav .nav-items ul li::after {
+  content: '';
+  width: 0%;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  display: block;
+}
+
+nav .nav-items ul li:hover::after {
+  width: 100%; /* White underline when hover cover fully */
+}
+
+/* Highlight active page in navigation. For e.g, when the user
+is at "About Us" Page, the "About Us" in the navigation section will be highlighted white.*/
+nav .nav-items ul li:nth-child(4) a {
+  color: white; 
+  text-decoration: none; /* Remove the underline */
+}
+
+/* Get Started Button Styles */
+#but a.button-link {
+  background-color: #fff;
+  color: black;
+  font-size: 21px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  text-decoration: none; /* Remove default link underline */
+  display: inline-block; /* Ensure button takes the size of its content */
+}
+
+#but a.button-link:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
+@media screen and (max-width:768px){
+  
+  nav .logo {
+    font-size: 1.5rem;
+  }
+  nav .nav-items ul li {
+    padding: 0.5rem;
+    
+  }
+  nav .nav-items ul li a{
+    font-size: 1.1rem;
+  }
+  #but a.button-link {
+    font-size: 14px; /* Adjust the font size for the button in mobile view */
+    margin-right:20px;
+  }
+}
+
+/* Contact Us Section */
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.centered {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.contact-us-box {
+  background-color: #fff;
+  display: flex;
+}
+
+.centered h1 {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.centered h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0;
+  background-color: #fdcc04;
+  transition: 0.5s ease; /* Add transition property for the underline */
+} 
+
+.centered p {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.left-contact,
+.right-contact {
+  border: 1.5px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  margin: 7px;
+}
+
+/* Left Side Contact: Form */
+.left-contact {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+
+.left-contact h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.left-contact p{
+  font-size: 17px;
+}
+
+.container p {
+  margin-bottom: 40px;
+}
+
+.row-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.row-input .input {
+  flex-basis: 48%; /* Slightly reduced to allow for spacing */
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding-bottom: 5px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+}
+
+label {
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Button Styles (inside the form) */
+.contact-us-box button {
+  background: #edcd4d;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 35px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.contact-us-box button:hover{
+  background-color: #dabd48;
+  transition: 0.5s;
+}
+
+/* Right Side Contact: Contacts Information */
+.right-contact {
+  flex-basis: 40%;
+  padding: 40px;
+  background-color: #fff3cb;
+}
+
+.right-contact h3{
+  font-size: 30px;
+}
+
+.right-contact p{
+  font-size: 17px;
+}
+
+.right-contact h3 {
+  margin-bottom: 20px;
+}
+
+tr td:first-child {
+  padding-right: 20px;
+}
+
+tr td {
+  padding-top: 20px;
+  font-size: 17px;
+  vertical-align: top;
+}
+
+tr td.icon-cell {
+  white-space: nowrap;
+  padding-right: 20px; /* Optional: Adjust the padding as needed */
+}
+
+/* Mobile View Media Query */
+@media only screen and (max-width: 768px) {
+  .contact-us-box {
+    flex-wrap: wrap;
+  }
+
+  .left-contact {
+    flex-basis: 100%;
+  }
+
+  .right-contact {
+    flex-basis: 100%;
+    margin-top: 20px; /* Added margin to create space between the two sections */
+    
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: rgb(140, 82, 140);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.foot-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foot-cont h1{
+  margin-bottom: 5px;
+}
+
+.social-media-icons {
+  margin-bottom: 2px;
+}
+
+.social-media-icons i {
+  font-size: 40px; /* Increase icon size */
+  margin: 0 10px;
+  padding:40px;
+}
+
+.nav-foot {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.nav-foot ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-foot li {
+  margin-right: 20px;
+}
+
+.nav-foot a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.5s;
+  padding: 7px;
+}
+
+.nav-foot a:hover {
+  color: #fdcc04; /* Change color on hover */
+}
+
+.Copyright p {
+  margin-top: 100px; /* Adjust the margin-top to create space within the .Copyright paragraph */
+}
+
+.scrolling-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.scrolling-animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+  
+
+  
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="style-contact-us.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script-contact-us.js"></script>
+    <title>WCoMMs Contact Us</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navigation Section -->
+        <nav>
+            <!-- Logo -->
+            <a href="index.html">
+                <div class="logo">WCoMMs</div>
+            </a>            
+            <!-- Navigation Items -->
+            <div class="nav-items">
+                <ul>
+                    <li><a href="about-us-page.html">About Us</a></li>
+                    <li><a href="our-plans-page.html">Our Plans  </a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="contact-us-page.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Started Button -->
+            <div id="but">
+                <a class="button-link" href="our-plans-page.html">Get Started</a>
+            </div>
+        </nav>
+        <hr color="black" />
+    </header>
+    
+    <!-- Main Content-->
+    <main>
+        <!-- Contact Us Section -->
+        <section class="container">
+            <!--Heading-->
+            <div class="centered">
+                <h1>Contact Us</h1>
+                <p>Send any of your queries you may have or even leave us a review below!</p>
+            </div>
+    
+            <div class="contact-us-box">
+                <!--Left Side Contact: Form-->
+                <div class="left-contact">
+                    <h3>Send Your Request</h3>
+                    <p>We would love to respond to your queries and help you in the best of our ability. Feel
+                        free to get in touch with us!</p>
+                        <form action="/some-url" method="GET" onsubmit="return validateForm()">
+    
+                            <!--First Row-->
+                            <div class="row-input">
+                                <!--First Name Input-->
+                                <div class="input">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="Tommy" name="first name" id="first_name">
+                                </div>
+    
+                                <!--Last Name Input-->
+                                <div class="input">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="Tan" name="last name" id="last_name">
+                                </div>
+                            </div>
+    
+                            <!--Second Row-->
+                            <div class="row-input">
+                                <!--Email Input-->
+                                <div class="input">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="tommytan@gmail.com" name="email" id="email">
+                                </div>
+    
+                                <!--Phone Number Input-->
+                                <div class="input">
+                                    <label>Phone Number</label>
+                                    <input type="text" placeholder="98302903" name="phone" id="phone">
+                                </div>
+                            </div>
+    
+                            <div class="row-input">
+                                <!--Subject Input-->
+                                <div class="input">
+                                    <label>Subject</label>
+                                    <input type="text" placeholder="Data Plan">
+                                </div>
+                            </div>
+                        
+                            <!--Message Input-->
+                            <label>Message</label>
+                            <textarea rows="12" placeholder="Type Your Message Here..." id="message"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                </div>
+    
+                <!--Right Side Contact: Contacts Information-->
+                <div class="right-contact">
+                    <h3>Our Contacts</h3>
+                    <p>You may also email, call or also visit us at our address.</p>
+                    <table>
+                        <tr>
+                            <td>Email&nbsp;&nbsp;<i class="fa fa-envelope" aria-hidden="true"></i></td>
+                            <td>contactus@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone&nbsp;&nbsp;<i class="fa fa-phone" aria-hidden="true"></i></td>
+                            <td>+65 62982047</td>
+                        </tr>
+                        <tr>
+                            <td class="icon-cell">Address&nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                            <td>Blk 956 Jurong West St 61, #05-50, Singapore 602956</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer class="scrolling-animation">
+        <!-- Footer Content -->
+        <div class="foot-cont">
+            <h1>Follow Us On Our Socials!</h1>
+    
+          <!-- Social Media Icons -->
+          <div class="social-media-icons">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </div>
+    
+          <!-- Horizontal Separation Line -->
+          <hr style="color: black; width: 40%;">
+    
+          <!-- Navigation Links in Footer -->
+          <div class="nav-foot">
+            <ul>
+                <li><a href="about-us-page.html">About Us</a></li>
+                <li><a href="our-plans-page.html">Our Plans</a></li>
+                <li><a href="faq-page.html">FAQ</a></li>
+                <li><a href="contact-us-page.html">Contact Us</a></li>
+            </ul>
+          </div> 
+    
+          <!-- Copyright-->
+          <div class="Copyright">
+            <p>© 2023 WCoMMs</p>
+          </div>
+    </footer>
+</body>
+</html>
+       
