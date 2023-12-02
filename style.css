@@ -1,0 +1,655 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Navigation Section */
+nav {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdcc04;
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+nav a {
+  text-decoration: none; /* Remove the underline for all anchor elements */
+}
+
+/* Logo Style */
+nav .logo {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 2rem;
+  text-decoration: none; 
+  cursor: pointer; /* Add a cursor pointer to indicate it's clickable for the logo */
+}
+
+nav .nav-items {
+  flex: 1; /* nav items nearer to logo*/
+}
+
+nav .nav-items ul {
+  display: flex;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+nav .nav-items li {
+  margin-right: 20px; 
+}
+
+nav .nav-items ul li {
+  display: inline-block;
+  padding: 16px;
+  position: relative;
+}
+
+nav .nav-items ul li a {
+  color: black;
+  text-decoration: none; /* Remove black underline */
+  font-size: 20px;
+}
+
+nav .nav-items ul li::after {
+  content: '';
+  width: 0%;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  display: block;
+}
+
+nav .nav-items ul li:hover::after {
+  width: 100%; /* White underline when hover cover fully */
+}
+
+/* Get Started Button Styles */
+#but a.button-link {
+  background-color: #fff;
+  color: black;
+  font-size: 21px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  text-decoration: none; /* Remove default link underline */
+  display: inline-block; /* Ensure button takes the size of its content */
+}
+
+#but a.button-link:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
+
+/* Main Message Section */
+#main-message {
+  background: #fdcc04;
+}
+
+#message-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+/* Left Side (Description) */
+#section-left {
+  display: flex;
+  color: #000;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  align-items: flex-start; 
+}
+
+#section-left h1 {
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+
+#section-left p {
+  margin-bottom: 27px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+#section-left button {
+  padding: 16px 48px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fdcc04;
+  background: #000;
+  transition: 0.5s;
+  border-radius: 50px; 
+}
+
+#section-left button:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+
+
+/* Right Side (Graphic Photo) */
+#section-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 32px;
+}
+
+.images {
+  height: auto;
+  max-width: 95%;
+  border-radius: 10px;
+}
+
+/* Services Offer Section */
+#services-offer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+#services-offer h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+#services-offer .pre p{
+  font-size: 22px;
+}
+
+#pre h1{
+  margin-bottom: 20px;
+}
+
+#pre p{
+  font-size: 20px;
+}
+
+.services-offer p {
+  color: black;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+#info {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between; /* Adjusted to space between the containers */
+  flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+}
+
+.services {
+  flex-basis: calc(31% - 20px); /* Adjusted to allow spacing between the containers */
+  background: #f7de7b;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  transition: 0.5s;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.services:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4); /*When mouse hover to that section, effect will appear*/
+}
+
+.services h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.services p {
+  font-size: 16px; 
+  margin-bottom: 10px; /* Added margin bottom for spacing between text and button */
+  line-height: 24px;
+}
+
+.services button {
+  padding: 16px;
+  font-size: 16px;
+  color: #fdcc04;
+  background: black;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 70px;
+}
+
+.services button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Special Deals Section */
+#offer {
+  background-color: #f9f9f9;;
+  padding: 20px;
+  text-align: center;
+  padding-top: 7%;
+}
+
+#pre-offer h1 {
+  color: black;
+  font-size: 42px;
+}
+
+#pre-offer p {
+  color:#fdcc04;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+#offer-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 32px; 
+margin: 20px auto;
+max-width: 950px; 
+}
+
+.offer-box {
+border: 2px solid #007bff;
+border-radius: 10px;
+padding: 20px;
+background-color: #fff;
+transition: 0.5s;
+width: 100%; 
+margin: 0 auto; 
+}
+
+.offer-box:hover {
+background-color: #fbf7e6; 
+}
+
+.offer-box h2 {
+color: #0958d6;
+border-radius: 20px;
+font-size: 32px; 
+font-weight: bold; 
+}
+
+.offer-desc {
+  margin-top:30px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.offer-desc p {
+  margin: 5px ;
+  font-size: 17px;
+}
+
+.offer-box h3 {
+  font-size: 40px;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.plan-but button {
+  background-color: #fdcc04;
+  color: black;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  padding-top: 2%;
+  transition: 0.5s;
+  
+}
+
+.plan-but button:hover {
+  background-color: black;
+  color: #fdcc04;
+}
+
+/* Why Choose Us? Section */
+#features {
+  background-color: #f5e9ff;
+  text-align: center;
+  width: 100%;
+  padding: 45px;
+}
+
+#features h1 {
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+#features-info .feature {
+  font-size: 25px;
+  padding-top: 35px;
+}
+
+#features-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.feature {
+  flex: 1;
+  max-width: 300px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+}
+
+.feature img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+
+/* Call to Action Section */
+#cta {
+  background-color: paleturquoise;
+  margin: 78px auto;
+  width: 70%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+
+#image-content img {
+  width: 425px;
+  height: 250px;
+  margin-bottom: 40px;
+}
+
+#text-content h1 {
+  font-size: 40px;
+  margin-bottom: 35px;
+  font-weight:lighter;
+}
+
+#text-content p {
+  font-size: 19px;
+  margin-bottom: 25px;
+}
+
+#text-content button {
+  background-color: #fdcc04;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#text-content button:hover {
+  background-color: #e5b908;
+  color: #000;
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: rgb(140, 82, 140);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.foot-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foot-cont h1{
+  margin-bottom: 5px;
+}
+
+.social-media-icons {
+  margin-bottom: 2px;
+}
+
+.social-media-icons i {
+  font-size: 40px; 
+  margin: 15px;
+  padding: 40px;
+}
+
+.nav-foot {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.nav-foot ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-foot li {
+  margin-right: 20px;
+}
+
+.nav-foot a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.5s;
+  padding: 7px;
+}
+
+.nav-foot a:hover {
+  color: #fdcc04; /* Change color on hover */
+}
+
+.Copyright p {
+  margin-top: 70px; 
+}
+
+/* Button for the user to scroll back to the top */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  }
+  
+  #back-to-top-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  }
+
+/* Tablet View (max-width:768px) */
+
+/* Navigation Section */
+@media (max-width: 768px) {
+  nav .logo {
+    font-size: 1.5rem;
+  }
+  nav .nav-items ul li {
+    padding: 0.5rem;
+    
+  }
+  nav .nav-items ul li a{
+    font-size: 1.1rem;
+  }
+  #but a.button-link {
+    font-size: 14px; /* Adjust the font size for the button in mobile view */
+    margin-right:20px;
+  }
+}
+
+/* Main Message Section */
+@media (max-width: 768px) {
+  .images {
+    padding-top: 7%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  #section-left h1{
+    font-size: 35px;
+  }
+  #section-left p{
+    font-size: 23px;
+  }
+}
+
+/* Services Offer Section */
+@media (max-width: 768px) {
+  .services {
+    flex-basis: 100%;
+    margin-bottom: 2%;
+  }
+
+  .services button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+  #services-offer .pre p{
+    line-height: 1.5;
+  }
+  #info .services {
+    flex-basis: calc(48% - 20px);
+    margin-bottom: 5%;
+  }
+
+  #info .services:last-child {
+    margin: 0 auto 5%;
+  }
+
+  #info .services h3 {
+    font-size: 20px;
+  }
+
+  #info .services p {
+    font-size: 15px;
+  }   
+}
+
+/* Special Deals Section */
+@media (max-width: 768px) {
+  #offer {
+    padding-top: 10%;
+  }
+
+  #pre-offer h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  #pre-offer p {
+    font-size: 24px;
+  }
+
+  #offer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .offer-box h2{
+    font-size: 28px;
+  }
+
+  .offer-box button {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .offer-desc p{
+    font-size: 15px;
+  }
+}
+
+/* Why Choose Us? Section */
+@media (max-width: 768px) {
+  #features{
+    margin-bottom: 50px;
+  }
+
+  #features h1 {
+    font-size: 32px;
+  }
+
+  #features-info .feature {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+
+  .feature{
+    margin: 25px;
+  }
+
+  .feature img{
+    width:80px;
+    height:80px;
+  } 
+}
+
+/* Call To Action Section */
+@media (max-width: 768px) {
+  #cta {
+    margin-top: 100px ;
+
+    width: 85%;
+  }
+
+  #text-content h1 {
+    font-size: 24px;
+  }
+
+  #image-content img {
+    width: 100%;
+    height: auto;
+    max-width: 375px;
+  }
+}
+
+.scrolling-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.scrolling-animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
