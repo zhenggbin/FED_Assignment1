@@ -1,0 +1,522 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+/* Navigation Section */
+nav {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdcc04;
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+nav a {
+  text-decoration: none; /* Remove the underline for all anchor elements */
+}
+
+/* Logo Style */
+nav .logo {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 2rem;
+  text-decoration: none; 
+  cursor: pointer; /* Add a cursor pointer to indicate it's clickable for the logo */
+}
+
+nav .nav-items {
+  flex: 1; /* nav items nearer to logo*/
+}
+
+nav .nav-items ul {
+  display: flex;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+nav .nav-items li {
+  margin-right: 20px; 
+}
+
+nav .nav-items ul li {
+  display: inline-block;
+  padding: 16px;
+  position: relative;
+}
+
+nav .nav-items ul li a {
+  color: black;
+  text-decoration: none; /* Remove black underline */
+  font-size: 20px;
+}
+
+nav .nav-items ul li::after {
+  content: '';
+  width: 0%;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  display: block;
+}
+
+nav .nav-items ul li:hover::after {
+  width: 100%; /* White underline when hover cover fully */
+}
+
+/* Highlight active page in navigation. For e.g, when the user
+is at "About Us" Page, the "About Us" in the navigation section will be highlighted white.*/
+nav .nav-items ul li:nth-child(1) a {
+  color: white; 
+  text-decoration: none; /* Remove the underline */
+}
+
+/* Get Started Button Styles */
+#but a.button-link {
+  background-color: #fff;
+  color: black;
+  font-size: 21px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  text-decoration: none; /* Remove default link underline */
+  display: inline-block; /* Ensure button takes the size of its content */
+}
+
+#but a.button-link:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
+/* Heading */
+#intro{
+  margin-bottom: 20px;
+}
+
+.centered {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.centered h1 {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.centered h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0;
+  background-color: #fdcc04;
+  transition: 0.5s ease; /* Add transition property for the underline */
+} 
+
+.centered p {
+  font-size: 23px;
+  margin-bottom: 40px;
+}
+
+/* About Us Section Styles */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-bottom: 100px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}  
+
+.img-container {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.img-container img {
+  width: 700px;
+  height: 450px;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.content {
+  flex: 1;
+  margin-left: 40px;
+}
+
+.content h2 {
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.content .read-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #efbf00;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+/* Image will be enlarged on hover effect */
+.img-container:hover img {
+  transform: scale(1.1); 
+}
+
+/* Read More Button hover effect */
+.content .read-more-btn:hover {
+  background-color: #d4a300; 
+}
+
+/* More About Us Section Styles */
+#more-abt-us {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.mission,
+.vision, .values {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #ddd; 
+  padding: 20px;
+  border-radius: 15px; 
+  margin: 20px;
+  transition: 0.3s ease;
+}
+
+.mission:hover,
+.vision:hover,
+.values:hover {
+  transform: scale(1.06); /* Scale the box on hover */
+}
+
+.mission h2,
+.vision h2, .values h2 {
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+.mission p, .vision p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.mission i, .vision i, .values i {
+  font-size: 50px; /* Adjust the size as needed */
+  margin-bottom: 20px; /* Add some spacing between the icon and the heading */
+}
+
+.values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.values li span {
+  font-weight: bold;
+  color: #fdcc04;
+  margin-right: 5px;
+}
+
+/* Review and Testimonials Section */
+#testimonial {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.pre-testi h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.pre-testi p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.test-grid {
+  width: 100%;
+  display: grid;
+  padding-left: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cont {
+  padding: 2rem;
+  display: grid;
+  max-width: 400px;
+  gap: 1rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.cont i {
+  font-size: 2.5rem;
+  color: gold;
+}
+
+.cont hr {
+  width: 40px;
+  margin: auto;
+  color: black;
+}
+
+.cont p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cont img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 100%; /* make the photo round */
+}
+
+.cont .name {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px; /* Adjust the gap between stars */
+  justify-content: center; /* Center vertically */
+  padding-bottom: 10px;
+}
+
+.star-rating i {
+  font-size: 1.5rem;
+  color: gold;
+}
+
+/* Footer Styles */
+footer {
+  background-color: rgb(140, 82, 140);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.foot-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foot-cont h1{
+  margin-bottom: 5px;
+}
+
+.social-media-icons {
+  margin-bottom: 2px;
+}
+
+.social-media-icons i {
+  font-size: 40px; /* Increase icon size */
+  margin: 0 10px;
+  padding:40px;
+}
+
+.nav-foot {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.nav-foot ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-foot li {
+  margin-right: 20px;
+}
+
+.nav-foot a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.5s;
+  padding: 7px;
+}
+
+.nav-foot a:hover {
+  color: #fdcc04; /* Change color on hover */
+}
+
+.Copyright p {
+  margin-top: 100px; /* Adjust the margin-top to create space within the .Copyright paragraph */
+}
+
+/* Button for the user to scroll back to the top */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  }
+  
+  #back-to-top-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  }
+
+@media screen and (max-width: 768px) {
+  nav .logo {
+    font-size: 1.5rem;
+  }
+  nav .nav-items ul li {
+    padding: 0.5rem;
+    
+  }
+  nav .nav-items ul li a{
+    font-size: 1.1rem;
+  }
+  #but a.button-link {
+    font-size: 14px; /* Adjust the font size for the button in mobile view */
+    margin-right:20px;
+  }
+
+  .centered {
+      padding: 0px 20px;
+  }
+
+  .centered h1 {
+      font-size: 36px;
+  }
+
+  .centered p {
+      font-size: 17px;
+      margin-bottom: 0px;
+  }
+
+  .img-container img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+      padding: 0px;
+  }
+
+  .about {
+      padding: 20px;
+      flex-direction: column;
+  }
+
+  .img-container {
+      margin-right: 0px;
+      margin-bottom: 20px;
+  }
+
+  .content {
+      padding: 0px;
+      font-stretch: 16px;
+  }
+
+  .content p {
+      padding: 0px;
+      font-size: 16px;
+  }
+
+  .content .read-more-btn {
+      font-size: 16px;
+  }
+
+  #more-abt-us {
+    flex-direction: column; 
+    align-items: center; 
+    padding:10px;
+  }
+
+  .mission,
+  .vision,
+  .values {
+    width: 100%; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .test-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-right: 40px;
+  }
+}
+
+.scrolling-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.scrolling-animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
