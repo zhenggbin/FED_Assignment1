@@ -12,9 +12,7 @@ User Stories:
 3) As a prospective customer, I want to be able to understand the key features of each services provided so that it can help me to make a more informed choice of choosing the plan which better suits my needs.
 
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
-These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url. 
+Wireframes Link (Figma): https://www.figma.com/file/BkP2bglRJ3BPxwzAqAVTt7/Zheng-Bin's-FED-Assignment-1?type=design&node-id=0%3A1&mode=design&t=WRQMvSzNo1uuFxw8-1
 
 ## Features
 
@@ -22,12 +20,14 @@ In this section, you should go over the different parts of your project, and des
  
 ### Existing Features
 - Navigation Bar - allows the users to navigate through the website easily and seamlessly
-- 
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- Scroll To Top Button - allows users to scroll back to the top of the website easily
+- Scrolling Animation - enhance user experience and engagement in the website
+- Contact Us Form - allows the users to contact the helpdesk.
+- FAQ accordion - allows the users to select and view answers by clicking on the questions they are interested in.
+- Footer - allow the user to go to other page of the website or to connect with the company through the different social media platforms.
 
 ### Features Left to Implement
-- Nil, may add in more in the future if I would want to improve the website further upon learning more in-depth javascript.
+- Nil for now, may add in more features in the future if I would want to improve the website further.
 
 ## Technologies Used
 
@@ -55,3 +55,5 @@ Testing Process:
 ## Credits
 
 - ALL of the photos, graphics and icons I used is from (https://www.freepik.com/).
+
+- I received insipration for this project from GreatStack and Brian Design in Youtube!
